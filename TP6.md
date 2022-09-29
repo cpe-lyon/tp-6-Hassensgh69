@@ -68,6 +68,8 @@ Le max-lease-time qui est la durée maximal en minutes ou en secondes pendant la
 
 5. Validez votre fichier de configuration avec la commande dhcpd -t puis redémarrez le serveur DHCP (avec la commande systemctl restart isc-dhcp-server) et vérifiez qu’il est actif.
 
+Pour redemarrer le systemctl il faut tapper la commande systemctl restart isc-dhcp-server et ensuite pour verifier si le systeme est actif on tappe la commande suivante systemctl status isc-dhcp-server
+
 ![image](https://user-images.githubusercontent.com/80455696/193054137-445033a6-f65a-4a14-9dd8-c6e85ccf841d.png)
 
 
