@@ -73,6 +73,17 @@ Pour redemarrer le systemctl il faut tapper la commande systemctl restart isc-dh
 ![image](https://user-images.githubusercontent.com/80455696/193054137-445033a6-f65a-4a14-9dd8-c6e85ccf841d.png)
 
 
+7. La commande tail -f /var/log/syslog affiche de manière continue les dernières lignes du fichier
+de log du système (dès qu’une nouvelle ligne est écrite à la fin du fichier, elle est affichée à l’écran).
+Lancez cette commande sur le serveur, puis connectez la carte réseau du client et observez les logs
+sur le serveur. Expliquez à quoi correspondent les messages DHCPDISCOVER, DHCPOFFER, DHCPREQUEST,
+DHCPACK. Vérifiez que le client reçoit bien une adresse IP de la plage spécifiée précédemment.
 
 
+![image](https://user-images.githubusercontent.com/80455696/193062013-460b9181-88c4-4631-b11a-52f4e3902386.png)
 
+DHCPDISCOVER : 
+
+DHCPOFFER : 
+
+DHCPREQUEST : 
