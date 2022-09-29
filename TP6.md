@@ -82,8 +82,8 @@ DHCPACK. Vérifiez que le client reçoit bien une adresse IP de la plage spécif
 
 ![image](https://user-images.githubusercontent.com/80455696/193062013-460b9181-88c4-4631-b11a-52f4e3902386.png)
 
-DHCPDISCOVER : 
+DHCPDISCOVER : C'est un paquet qui sert à détecter les serveurs DHCP disponibles.
 
-DHCPOFFER : 
+DHCPOFFER : C'est un paquet qui répond à un paquet DHCPDISCOVER, qui inclut les premiers paramètres tels que l'adresse IP.
 
-DHCPREQUEST : 
+DHCPREQUEST : Cela correspond à une requête du client qui peut ainsi prolonger son bail.
