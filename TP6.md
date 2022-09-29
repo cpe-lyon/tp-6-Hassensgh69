@@ -49,3 +49,28 @@ Nom du client :
 2. Un serveur DHCP a besoin d’une IP statique. Attribuez de manière permanente l’adresse IP 192.168.100.1 à l’interface réseau du réseau interne. Vérifiez que la configuration est correcte.
 
 ![image](https://user-images.githubusercontent.com/80455696/193046521-8fb629a0-2704-458e-817c-79c78a40164c.png)
+
+3. 
+
+Fichier dhcpd.conf :
+
+![image](https://user-images.githubusercontent.com/80455696/193048899-f2e3b12d-18dd-4e81-825e-0f31d06cafda.png)
+
+Les deux premières lignes sont :
+
+Le default-lease-time qui est la durée en minutes ou en secondes pendant laquelle un périphérique réseau peut utiliser une adresse IP dans un réseau. L'adresse IP est réservée pour cet appareil jusqu'à l'expiration de la réservation.
+
+Le max-lease-time qui est la durée maximal en minutes ou en secondes pendant laquelle un périphérique réseau peut utiliser une adresse IP dans un réseau.
+
+4.Editez le fichier /etc/default/isc-dhcp-server afin de spécifier l’interface sur laquelle le serveur doit écouter. 
+
+![image](https://user-images.githubusercontent.com/80455696/193051087-62e4b73d-32b5-44e0-9d1c-62b35b717bb0.png)
+
+5. Validez votre fichier de configuration avec la commande dhcpd -t puis redémarrez le serveur DHCP (avec la commande systemctl restart isc-dhcp-server) et vérifiez qu’il est actif.
+
+![image](https://user-images.githubusercontent.com/80455696/193054137-445033a6-f65a-4a14-9dd8-c6e85ccf841d.png)
+
+
+
+
+
