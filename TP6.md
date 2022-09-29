@@ -31,9 +31,21 @@ Configuration du client avec une carte réseau :
 4. 
 
 Nom du serveur :
+
 ![image](https://user-images.githubusercontent.com/80455696/193036429-2b31a9b2-2fc5-4fce-9b54-c075548a5f62.png)
 
 Nom du client :
 
 ![image](https://user-images.githubusercontent.com/80455696/193036677-b999594e-880b-4408-ad51-37686e1154c9.png)
 
+
+## Exercice 3. Installation du serveur DHCP
+
+1. Sur le serveur, installez le paquet isc-dhcp-server. La commande systemctl status isc-dhcp-server devrait vous indiquer que le serveur n’a pas réussi à démarrer, ce qui est normal puisqu’il n’est pas encore configuré (en particulier, il n’a pas encore d’adresses IP à distribuer):
+
+                    sudo apt install isc-dhcp-server                    
+
+
+2. Un serveur DHCP a besoin d’une IP statique. Attribuez de manière permanente l’adresse IP 192.168.100.1 à l’interface réseau du réseau interne. Vérifiez que la configuration est correcte.
+
+![image](https://user-images.githubusercontent.com/80455696/193046521-8fb629a0-2704-458e-817c-79c78a40164c.png)
