@@ -87,3 +87,26 @@ DHCPDISCOVER : C'est un paquet qui sert à détecter les serveurs DHCP disponibl
 DHCPOFFER : C'est un paquet qui répond à un paquet DHCPDISCOVER, qui inclut les premiers paramètres tels que l'adresse IP.
 
 DHCPREQUEST : Cela correspond à une requête du client qui peut ainsi prolonger son bail.
+
+
+8. Que contient le fichier /var/lib/dhcp/dhcpd.leases sur le serveur, et qu’afficle la commande dhcp-lease-list ? 
+
+
+![image](https://user-images.githubusercontent.com/80455696/193459555-8b230bbe-3287-4357-b164-974704b15820.png)
+
+
+
+
+
+Le fichier /var/lib/dhcp/dhcpd.leases est une base de données qui stocke toute les bails dhcp attribués aux machnies reliés au serveurs DHCP. La commande dhcp-lease-list permet de demander au serveur DHCP qu'elles sont les adresse IP DCHP actuellement attribués.
+
+
+9. Vérifiez que les deux machines peuvent communiquer via leur adresse IP, à l’aide de la commande ping
+
+Ping du serveur DHCP vers le client :
+
+![image](https://user-images.githubusercontent.com/80455696/193459619-1cb9a750-db0c-457f-9043-771caef07a0d.png)
+
+Ping du client vers le serveur DHCP : 
+
+![image](https://user-images.githubusercontent.com/80455696/193459713-bfe6189e-d15d-4c66-81ee-591d5447944f.png)
