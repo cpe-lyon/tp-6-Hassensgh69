@@ -110,3 +110,14 @@ Ping du serveur DHCP vers le client :
 Ping du client vers le serveur DHCP : 
 
 ![image](https://user-images.githubusercontent.com/80455696/193459713-bfe6189e-d15d-4c66-81ee-591d5447944f.png)
+
+
+10. Modifiez la configuration du serveur pour que l’interface réseau du client reçoive l’IP statique 192.168.100.20 :
+
+![image](https://user-images.githubusercontent.com/80455696/193462605-358e754c-a2f0-49fb-9890-7e652c8af77d.png)
+
+Ensuite il faut validez notre fichier de configuration avec la commande dhcpd -t puis redémarrez le serveur DHCP
+(avec la commande systemctl restart isc-dhcp-server) et vérifiez qu’il est actif.
+Et  cote client on tappe la commande dhclient -v pour mettre a jour la nouvelle confuguration de la carte réseau :
+
+![image](https://user-images.githubusercontent.com/80455696/193462694-98158c73-6ce4-4645-a513-669769fc448f.png)
