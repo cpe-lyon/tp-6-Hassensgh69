@@ -121,3 +121,16 @@ Ensuite il faut validez notre fichier de configuration avec la commande dhcpd -t
 Et  cote client on tappe la commande dhclient -v pour mettre a jour la nouvelle confuguration de la carte réseau :
 
 ![image](https://user-images.githubusercontent.com/80455696/193462694-98158c73-6ce4-4645-a513-669769fc448f.png)
+
+
+## Exercice 4. Donner un accès à Internet au client
+
+1. La première chose à faire est d’autoriser l’IP forwarding sur le serveur (désactivé par défaut, étant
+donné que la plupart des utilisateurs n’en ont pas besoin). Pour cela, il suffit de décommenter la ligne
+net.ipv4.ip_forward=1 dans le fichier /etc/sysctl.conf. Pour que les changements soient pris en
+compte immédiatement, il faut saisir la commande sudo sysctl -p /etc/sysctl.conf.
+Vérifiez avec la commande sysctl net.ipv4.ip_forward que la nouvelle valeur a bien été prise en
+compte.
+
+![image](https://user-images.githubusercontent.com/80455696/193464316-610bf5e9-812a-47c1-b7dc-025073c7c565.png)
+
