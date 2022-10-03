@@ -190,3 +190,14 @@ Commencez par rajouter les lignes suivantes à la fin du fichier named.conf.loca
 
 ![image](https://user-images.githubusercontent.com/80455696/193536312-d1484c00-99ae-47d8-9a3c-2265d8cca106.png)
 
+Créez ensuite le fichier db.192.168.100 à partir du fichier db.127, et modifiez le de la même manière que le fichier de zone. Sur la dernière ligne, faites correspondre l’adresse IP avec celle du serveur :
+
+![image](https://user-images.githubusercontent.com/80455696/193540395-0b7ef4a2-0919-475a-b77a-4a3faa6c2a5d.png)
+
+4. Utilisez les utilitaires named-checkconf et named-checkzone pour valider vos fichiers de configuration :
+
+On peut voir qu'a la suite des commandes on nous renvoit un "ok", ce qui veut dire que tout fonctionne correctement.
+
+![image](https://user-images.githubusercontent.com/80455696/193541181-cc05caa0-26a7-416c-802d-1666d3bf5505.png)
+
+Modifiez le fichier /etc/systemd/resolved.conf et décommentez la section DNS.
