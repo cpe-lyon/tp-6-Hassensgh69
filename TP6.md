@@ -164,4 +164,29 @@ On installer lynx avec la commande sudo apt install lynx puis on le lance. Pour 
 
 ![image](https://user-images.githubusercontent.com/80455696/193533729-56b8a734-8f67-4722-a44c-140d0f2c6433.png)
 
+## Exercice 6. Configuration du serveur DNS pour la zone tpadmin.local
+
+1. Modifiez le fichier /etc/bind/named.conf.local et ajoutez les lignes suivantes :
+
+![image](https://user-images.githubusercontent.com/80455696/193534580-5e3745a5-f529-4b50-a6b2-8a44dc5a4a90.png)
+
+2. Créez une copie appelée db.tpadmin.local du fichier db.local.
+
+![image](https://user-images.githubusercontent.com/80455696/193534978-8434273f-2f46-4eb1-a336-c38f12c2a5cd.png)
+
+Dans le nouveau fichier, remplacez toutes les références à localhost par tpadmin.local, et l’adresse 127.0.0.1 par l’adresse IP du
+serveur.
+
+Fichier original :
+
+![image](https://user-images.githubusercontent.com/80455696/193535554-beae2cc5-5f53-4a1f-a44f-53c6470f5697.png)
+
+Fichier avec modification : 
+
+![image](https://user-images.githubusercontent.com/80455696/193535637-540e45a3-f385-4e0d-a72c-9f83d6f8bfec.png)
+
+3. Maintenant que nous avons configuré notre fichier de zone, il reste à configurer le fichier de zone inverse, qui permet de convertir une adresse IP en nom.
+Commencez par rajouter les lignes suivantes à la fin du fichier named.conf.local :
+
+![image](https://user-images.githubusercontent.com/80455696/193536312-d1484c00-99ae-47d8-9a3c-2265d8cca106.png)
 
