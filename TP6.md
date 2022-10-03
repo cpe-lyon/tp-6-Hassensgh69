@@ -134,3 +134,34 @@ compte.
 
 ![image](https://user-images.githubusercontent.com/80455696/193464316-610bf5e9-812a-47c1-b7dc-025073c7c565.png)
 
+2. Ensuite, il faut autoriser la traduction d’adresse source (masquerading) en ajoutant la règle iptables
+suivante :
+sudo iptables --table nat --append POSTROUTING --out-interface enp0s3 -j MASQUERADE
+
+![image](https://user-images.githubusercontent.com/80455696/193530643-1d667cdc-a795-42f5-a6cd-c15cb68a8020.png)
+
+TEST de ping sur le client :
+
+![image](https://user-images.githubusercontent.com/80455696/193530747-f60866ab-3943-483d-94fa-1f55383ada1e.png)
+
+## Exercice 5. Installation du serveur DNS
+
+2. A ce stade, Bind n’est pas configuré et ne fait donc pas grand chose. L’une des manières les simples de le configurer est d’en faire un serveur cache : il ne fait rien à part mettre en cache les réponses de serveurs externes à qui il transmet la requête de résolution de nom.
+Nous allons donc modifier son fichier de configuration : /etc/bind/named.conf.options. Dans ce
+fichier, décommentez la partie forwarders, et à la place de 0.0.0.0, renseignez les IP de DNS publics comme 1.1.1.1 et 8.8.8.8 (en terminant à chaque fois par un point virgule). Redémarrez le serveur
+bind9.
+
+![image](https://user-images.githubusercontent.com/80455696/193532204-9de6e73f-ae46-42b9-9b62-7434dd0bcf39.png)
+
+3. Sur le client, retentez un ping sur www.google.fr. Cette fois ça devrait marcher ! On valide ainsi la configuration du DHCP effectuée précédemment, puisque c’est grâce à elle que le client a trouvé son serveur DNS.
+
+![image](https://user-images.githubusercontent.com/80455696/193532430-06a18248-f607-4603-ad2b-f9e464d0a04b.png)
+
+
+4. Sur le client, installez le navigateur en mode texte lynx et essayez de surfer sur fr.wikipedia.org (bienvenue dans le passé...)
+
+On installer lynx avec la commande sudo apt install lynx puis on le lance. Pour lancer wikipedia il faut tapper lynx wikipedia.org
+
+![image](https://user-images.githubusercontent.com/80455696/193533729-56b8a734-8f67-4722-a44c-140d0f2c6433.png)
+
+
