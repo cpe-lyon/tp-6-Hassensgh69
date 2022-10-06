@@ -201,3 +201,11 @@ On peut voir qu'a la suite des commandes on nous renvoit un "ok", ce qui veut di
 ![image](https://user-images.githubusercontent.com/80455696/193541181-cc05caa0-26a7-416c-802d-1666d3bf5505.png)
 
 Modifiez le fichier /etc/systemd/resolved.conf et décommentez la section DNS.
+
+
+5. Redémarrer le serveur Bind9. Vous devriez maintenant être en mesure de « pinguer »les différentes
+machines du réseau.
+
+![image](https://user-images.githubusercontent.com/80455696/194234235-12cfa52e-01bb-4a9b-833d-27ec2d43dfd8.png)
+
+Conclusion du tp :
