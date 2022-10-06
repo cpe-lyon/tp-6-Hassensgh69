@@ -209,3 +209,5 @@ machines du réseau.
 ![image](https://user-images.githubusercontent.com/80455696/194234235-12cfa52e-01bb-4a9b-833d-27ec2d43dfd8.png)
 
 Conclusion du tp :
+
+![image](https://user-images.githubusercontent.com/80455696/194234604-6c81a4b9-d81c-408d-b4c8-75049802b0a8.png)
