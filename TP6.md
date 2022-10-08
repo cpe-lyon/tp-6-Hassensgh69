@@ -210,4 +210,6 @@ machines du réseau.
 
 Conclusion du tp :
 
+On peut desormais ping le serveur depuis le client en utilisant son nom de domaine " SRV.tpadmin.local "avec la commande suivante ` ping SRV.tpadmin.local `. Dans le cadre du tp on est censé aussi ping du serveur vers le client en utilisant so n nom de domaine "SRV.tpadmin.local"  mais j'ai rencontré quelque problème qui ont fait que ca na pas été possible. 
+
 ![image](https://user-images.githubusercontent.com/80455696/194234604-6c81a4b9-d81c-408d-b4c8-75049802b0a8.png)
